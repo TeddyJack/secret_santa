@@ -5,6 +5,5 @@ with open('names.txt', encoding='utf-8') as f_in:
     shuffle(names)
 
 with open('pairs.txt', 'w', encoding='utf-8') as f_out:
-    for i in range(len(names) - 1):
+    for i in range(-1, len(names) - 1):
         f_out.write(f'{names[i]} -> {names[i+1]}\n')
-    f_out.write(f'{names[len(names) - 1]} -> {names[0]}\n')
